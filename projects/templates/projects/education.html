@@ -1,0 +1,27 @@
+
+{% extends "projects/index.html"%}
+
+{% block content %}
+
+<!-- Education-->
+<div class="container-fluid p-0">
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Education</h2>
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    {% for ins in lest %}
+                    <h3 class="mb-0">{{ins.college}}</h3>
+                    <div class="subheading mb-3">{{ins.degree}}</div>
+                    <div>{{ins.course}}</div>
+                    <p>{{ins.gpa}}</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">{{ins.time}}</span></div>                
+                {% endfor %}
+            </div>
+            
+    </section>
+    <hr class="m-0" />
+</div>
+{% endblock content %}

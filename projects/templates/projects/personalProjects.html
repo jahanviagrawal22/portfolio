@@ -1,0 +1,25 @@
+{% extends "projects/index.html" %}
+{% block content %}
+
+<div class="container-fluid p-0">
+    <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+            
+            <h2 class="mb-5">Experience</h2>
+            {% for ins in exp %}
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    
+                    <h3 class="mb-0">{{ins.post}}</h3>
+                    <div class="subheading mb-3">{{ins.firm}}</div>
+                    <p>{{ins.disc}}</p>
+                    
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">{{ins.time}}</span></div>
+            </div>  
+            {% endfor %}
+        </div>
+    </section>
+    <hr class="m-0" />
+</div>
+{% endblock content %}
